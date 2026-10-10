@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>English Grade 6: Personal Hygiene</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        fresh: {
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Comic Sans MS', 'Fredoka', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4;
+            background-image: radial-gradient(#bae6fd 0.75px, transparent 0.75px), radial-gradient(#bae6fd 0.75px, #f0f9ff 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .heading-font {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        /* Smooth Tab Transitions */
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Pulse Animation for Speech Buttons */
+        .speak-btn:active {
+            transform: scale(0.92);
+        }
+
+        /* Glassmorphic Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(8px);
+            border: 2px solid #e0f2fe;
+            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1), 0 8px 10px -6px rgba(14, 165, 233, 0.05);
+        }
+
+        /* Cute Custom Radio Buttons */
+        .custom-radio input[type="radio"]:checked + div {
+            background-color: #e0f2fe;
+            border-color: #0ea5e9;
+            color: #0284c7;
+            font-weight: 700;
+        }
+
+        /* Dropdown Select Styling */
+        select.custom-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%30ea5e9' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.25em;
+        }
+
+        /* Hide scrollbars for slick look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-24 text-slate-800">
+
+    <!-- App Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-brand-200 px-4 py-3 shadow-sm">
+        <div class="max-w-xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-500 to-fresh-400 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    🧼
+                </div>
+                <div>
+                    <h1 class="heading-font text-lg font-bold text-slate-800 leading-tight">English Fun!</h1>
+                    <p class="text-xs text-brand-600 font-semibold">Grade 6 • Personal Hygiene</p>
+                </div>
+            </div>
+            <button onclick="playTTS('Welcome to Grade 6 English Personal Hygiene!')" class="p-2 rounded-xl bg-brand-50 text-brand-600 hover:bg-brand-100 active:scale-95 transition-all text-xs flex items-center gap-1 font-semibold border border-brand-200">
+                🔊 <span>Audio</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-xl mx-auto px-4 pt-4">
+
+        <!-- ================================================== -->
+        <!-- TAB 1: MATERI PEMBELAJARAN                         -->
+        <!-- ================================================== -->
+        <section id="materi-tab" class="tab-content active space-y-5">
+            
+            <!-- Banner / Hero -->
+            <div class="bg-gradient-to-r from-brand-500 to-cyan-500 rounded-3xl p-5 text-white shadow-lg relative overflow-hidden">
+                <div class="absolute -right-4 -bottom-4 opacity-20 text-8xl">🫧</div>
+                <span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold mb-2">Unit 1: Healthy Habits</span>
+                <h2 class="heading-font text-2xl font-bold mb-1">Let's Keep Clean & Healthy!</h2>
+                <p class="text-xs text-brand-100 leading-relaxed">Pelajari kosakata dan langkah mencuci tangan dalam Bahasa Inggris dengan mudah!</p>
+            </div>
+
+            <!-- Card 1: What Is Hygiene? -->
+            <div class="glass-card rounded-2xl p-5 border-l-8 border-l-brand-500">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-2xl">💡</span>
+                        <h3 class="heading-font text-lg font-bold text-slate-800">1. What Is Hygiene?</h3>
+                    </div>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                    <strong class="text-brand-600">Hygiene</strong> berarti kebersihan atau upaya menjaga kebersihan tubuh agar tetap sehat. Kita perlu menjaga kebersihan tubuh setiap hari. Salah satu caranya adalah mencuci tangan menggunakan sabun dan air bersih.
+                </p>
+                
+                <div class="bg-brand-50/80 rounded-xl p-3 border border-brand-100 space-y-2">
+                    <p class="text-xs font-bold text-brand-600 uppercase tracking-wider">Contoh Kalimat:</p>
+                    <div class="space-y-2 text-xs sm:text-sm">
+                        <div class="flex items-start justify-between gap-2 bg-white p-2.5 rounded-lg border border-brand-100 shadow-sm">
+                            <div>
+                                <p class="font-semibold text-slate-800">"Hygiene helps us stay healthy."</p>
+                                <p class="text-slate-500 text-xs italic">Kebersihan membantu kita tetap sehat.</p>
+                            </div>
+                            <button onclick="playTTS('Hygiene helps us stay healthy')" class="speak-btn text-brand-500 hover:text-brand-600 p-1">🔊</button>
+                        </div>
+                        <div class="flex items-start justify-between gap-2 bg-white p-2.5 rounded-lg border border-brand-100 shadow-sm">
+                            <div>
+                                <p class="font-semibold text-slate-800">"I wash my hands every day."</p>
+                                <p class="text-slate-500 text-xs italic">Saya mencuci tangan setiap hari.</p>
+                            </div>
+                            <button onclick="playTTS('I wash my hands every day')" class="speak-btn text-brand-500 hover:text-brand-600 p-1">🔊</button>
+                        </div>
+                        <div class="flex items-start justify-between gap-2 bg-white p-2.5 rounded-lg border border-brand-100 shadow-sm">
+                            <div>
+                                <p class="font-semibold text-slate-800">"Clean hands are important."</p>
+                                <p class="text-slate-500 text-xs italic">Tangan yang bersih itu penting.</p>
+                            </div>
+                            <button onclick="playTTS('Clean hands are important')" class="speak-btn text-brand-500 hover:text-brand-600 p-1">🔊</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Vocabulary -->
+            <div class="glass-card rounded-2xl p-5 border-l-8 border-l-fresh-500">
+                <div class="flex items-center space-x-2 mb-3">
+                    <span class="text-2xl">📚</span>
+                    <h3 class="heading-font text-lg font-bold text-slate-800">2. Vocabulary — Kosakata Kebersihan</h3>
+                </div>
+                <p class="text-xs text-slate-500 mb-3">Klik tombol 🔊 pada kosakata untuk mendengarkan pengucapan yang benar!</p>
+
+                <!-- Grid Vocabulary -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+                    <!-- Vocab item template -->
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">1</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Hygiene</p>
+                                <p class="text-[11px] text-slate-500">Kebersihan</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Hygiene')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">2</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Habit</p>
+                                <p class="text-[11px] text-slate-500">Kebiasaan</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Habit')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">3</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Clean</p>
+                                <p class="text-[11px] text-slate-500">Bersih</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Clean')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">4</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Dirty</p>
+                                <p class="text-[11px] text-slate-500">Kotor</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Dirty')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">5</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Wash</p>
+                                <p class="text-[11px] text-slate-500">Mencuci</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Wash')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">6</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Soap</p>
+                                <p class="text-[11px] text-slate-500">Sabun</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Soap')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">7</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Water</p>
+                                <p class="text-[11px] text-slate-500">Air</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Water')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">8</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Towel</p>
+                                <p class="text-[11px] text-slate-500">Handuk</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Towel')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">9</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Healthy</p>
+                                <p class="text-[11px] text-slate-500">Sehat</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Healthy')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+
+                    <div class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-brand-50 rounded-xl border border-slate-200 transition-colors">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-6 h-6 rounded-full bg-fresh-100 text-fresh-600 text-xs font-bold flex items-center justify-center">10</span>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Hands</p>
+                                <p class="text-[11px] text-slate-500">Tangan</p>
+                            </div>
+                        </div>
+                        <button onclick="playTTS('Hands')" class="speak-btn text-brand-500 p-1 text-xs">🔊</button>
+                    </div>
+                </div>
+
+                <!-- Usage Examples -->
+                <div class="bg-fresh-50 rounded-xl p-3 border border-fresh-200 space-y-1 text-xs">
+                    <p class="font-bold text-fresh-700 uppercase tracking-wider mb-2">📌 Contoh Penggunaan Kosakata:</p>
+                    <p class="text-slate-700">• <strong>Wash your hands.</strong> — Cucilah tanganmu.</p>
+                    <p class="text-slate-700">• <strong>Use soap and water.</strong> — Gunakan sabun dan air.</p>
+                    <p class="text-slate-700">• <strong>Dry your hands with a clean towel.</strong> — Keringkan tanganmu dengan handuk bersih.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Things We Need -->
+            <div class="glass-card rounded-2xl p-5 border-l-8 border-l-amber-400">
+                <div class="flex items-center space-x-2 mb-3">
+                    <span class="text-2xl">🧼</span>
+                    <h3 class="heading-font text-lg font-bold text-slate-800">3. Things We Need — Benda yang Dibutuhkan</h3>
+                </div>
+                <div class="grid grid-cols-3 gap-2 text-center">
+                    <div class="p-3 bg-amber-50 rounded-2xl border border-amber-200 flex flex-col items-center">
+                        <div class="text-3xl mb-1">🧼</div>
+                        <h4 class="font-bold text-xs text-amber-900">Soap (Sabun)</h4>
+                        <p class="text-[11px] text-amber-800 mt-1 leading-snug">Untuk membersihkan tangan & hilangkan kuman.</p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-2xl border border-blue-200 flex flex-col items-center">
+                        <div class="text-3xl mb-1">💧</div>
+                        <h4 class="font-bold text-xs text-blue-900">Water (Air)</h4>
+                        <p class="text-[11px] text-blue-800 mt-1 leading-snug">Untuk membasahi tangan & membilas sabun.</p>
+                    </div>
+                    <div class="p-3 bg-emerald-50 rounded-2xl border border-emerald-200 flex flex-col items-center">
+                        <div class="text-3xl mb-1">🧺</div>
+                        <h4 class="font-bold text-xs text-emerald-900">Towel (Handuk)</h4>
+                        <p class="text-[11px] text-emerald-800 mt-1 leading-snug">Untuk mengeringkan tangan setelah dicuci.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Let's Wash Our Hands! -->
+            <div class="glass-card rounded-2xl p-5 border-l-8 border-l-indigo-500">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-2xl">🙌</span>
+                        <h3 class="heading-font text-lg font-bold text-slate-800">4. Let's Wash Our Hands!</h3>
+                    </div>
+                    <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-md font-bold">5 Steps</span>
+                </div>
+                <p class="text-xs text-slate-500 mb-4">Langkah-langkah mencuci tangan yang benar dalam Bahasa Inggris:</p>
+
+                <div class="space-y-3">
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">1</span>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-xs text-slate-800">Step 1 — Wet</h4>
+                                <button onclick="playTTS('Wet your hands with clean water')" class="speak-btn text-indigo-500 text-xs">🔊</button>
+                            </div>
+                            <p class="text-xs font-semibold text-indigo-600">Wet your hands with clean water.</p>
+                            <p class="text-[11px] text-slate-500 italic">Basahi tanganmu dengan air bersih.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">2</span>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-xs text-slate-800">Step 2 — Get Soap</h4>
+                                <button onclick="playTTS('Get soap and rub your hands with the soap')" class="speak-btn text-indigo-500 text-xs">🔊</button>
+                            </div>
+                            <p class="text-xs font-semibold text-indigo-600">Get soap and rub your hands with the soap.</p>
+                            <p class="text-[11px] text-slate-500 italic">Ambil sabun dan gosok tanganmu menggunakan sabun.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">3</span>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-xs text-slate-800">Step 3 — Scrub</h4>
+                                <button onclick="playTTS('Scrub your hands for at least 20 seconds')" class="speak-btn text-indigo-500 text-xs">🔊</button>
+                            </div>
+                            <p class="text-xs font-semibold text-indigo-600">Scrub your hands for at least 20 seconds.</p>
+                            <p class="text-[11px] text-slate-500 italic">Gosok tanganmu setidaknya selama 20 detik, termasuk sela-sela jari.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">4</span>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-xs text-slate-800">Step 4 — Rinse</h4>
+                                <button onclick="playTTS('Rinse your hands well under running water')" class="speak-btn text-indigo-500 text-xs">🔊</button>
+                            </div>
+                            <p class="text-xs font-semibold text-indigo-600">Rinse your hands well under running water.</p>
+                            <p class="text-[11px] text-slate-500 italic">Bilas tanganmu dengan baik di bawah air mengalir.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start space-x-3">
+                        <span class="bg-indigo-600 text-white font-bold text-xs w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5">5</span>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-center">
+                                <h4 class="font-bold text-xs text-slate-800">Step 5 — Dry</h4>
+                                <button onclick="playTTS('Dry your hands using a clean towel')" class="speak-btn text-indigo-500 text-xs">🔊</button>
+                            </div>
+                            <p class="text-xs font-semibold text-indigo-600">Dry your hands using a clean towel.</p>
+                            <p class="text-[11px] text-slate-500 italic">Keringkan tanganmu menggunakan handuk bersih.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Key Words -->
+            <div class="glass-card rounded-2xl p-5 border-l-8 border-l-purple-500">
+                <div class="flex items-center space-x-2 mb-3">
+                    <span class="text-2xl">🔑</span>
+                    <h3 class="heading-font text-lg font-bold text-slate-800">5. Key Words — Kata Kunci Action Verbs</h3>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2 text-xs mb-3">
+                    <div class="p-2 bg-purple-50 rounded-xl border border-purple-100 flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-purple-900 block">Wet</span>
+                            <span class="text-slate-600 text-[11px]">Membasahi</span>
+                        </div>
+                        <button onclick="playTTS('Wet')" class="speak-btn text-purple-600">🔊</button>
+                    </div>
+                    <div class="p-2 bg-purple-50 rounded-xl border border-purple-100 flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-purple-900 block">Get soap</span>
+                            <span class="text-slate-600 text-[11px]">Ambil sabun</span>
+                        </div>
+                        <button onclick="playTTS('Get soap')" class="speak-btn text-purple-600">🔊</button>
+                    </div>
+                    <div class="p-2 bg-purple-50 rounded-xl border border-purple-100 flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-purple-900 block">Scrub</span>
+                            <span class="text-slate-600 text-[11px]">Menggosok</span>
+                        </div>
+                        <button onclick="playTTS('Scrub')" class="speak-btn text-purple-600">🔊</button>
+                    </div>
+                    <div class="p-2 bg-purple-50 rounded-xl border border-purple-100 flex justify-between items-center">
+                        <div>
+                            <span class="font-bold text-purple-900 block">Rinse</span>
+                            <span class="text-slate-600 text-[11px]">Membilas</span>
+                        </div>
+                        <button onclick="playTTS('Rinse')" class="speak-btn text-purple-600">🔊</button>
+                    </div>
+                    <div class="p-2 bg-purple-50 rounded-xl border border-purple-100 flex justify-between items-center col-span-2">
+                        <div>
+                            <span class="font-bold text-purple-900 block">Dry</span>
+                            <span class="text-slate-600 text-[11px]">Mengeringkan</span>
+                        </div>
+                        <button onclick="playTTS('Dry')" class="speak-btn text-purple-600">🔊</button>
+                    </div>
+                </div>
+
+                <!-- Catatan Khusus -->
+                <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-start space-x-2">
+                    <span class="text-base">📌</span>
+                    <div>
+                        <strong class="font-bold">Catatan Khusus:</strong>
+                        <p class="mt-0.5 leading-relaxed">
+                            <span class="underline">Wash</span> berarti mencuci secara umum, sedangkan <span class="underline">Scrub</span> berarti menggosok dan <span class="underline">Rinse</span> berarti membilas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Let's Practice -->
+            <div class="glass-card rounded-2xl p-5 border-l-8 border-l-teal-500">
+                <div class="flex items-center space-x-2 mb-3">
+                    <span class="text-2xl">💬</span>
+                    <h3 class="heading-font text-lg font-bold text-slate-800">6. Let's Practice! — Contoh Kalimat</h3>
+                </div>
+
+                <div class="space-y-2 text-xs mb-4">
+                    <div class="p-2.5 bg-teal-50/60 rounded-xl border border-teal-100">
+                        <p class="font-semibold text-teal-900">"I wash my hands with soap."</p>
+                        <p class="text-slate-500 text-[11px]">Saya mencuci tangan dengan sabun.</p>
+                    </div>
+                    <div class="p-2.5 bg-teal-50/60 rounded-xl border border-teal-100">
+                        <p class="font-semibold text-teal-900">"I use clean water."</p>
+                        <p class="text-slate-500 text-[11px]">Saya menggunakan air bersih.</p>
+                    </div>
+                    <div class="p-2.5 bg-teal-50/60 rounded-xl border border-teal-100">
+                        <p class="font-semibold text-teal-900">"I scrub my hands for 20 seconds."</p>
+                        <p class="text-slate-500 text-[11px]">Saya menggosok tangan selama 20 detik.</p>
+                    </div>
+                    <div class="p-2.5 bg-teal-50/60 rounded-xl border border-teal-100">
+                        <p class="font-semibold text-teal-900">"I rinse my hands well."</p>
+                        <p class="text-slate-500 text-[11px]">Saya membilas tangan dengan baik.</p>
+                    </div>
+                    <div class="p-2.5 bg-teal-50/60 rounded-xl border border-teal-100">
+                        <p class="font-semibold text-teal-900">"I dry my hands with a clean towel."</p>
+                        <p class="text-slate-500 text-[11px]">Saya mengeringkan tangan dengan handuk bersih.</p>
+                    </div>
+                </div>
+
+                <!-- Remember Checklist Banner -->
+                <div class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white p-4 rounded-2xl shadow-md">
+                    <h4 class="heading-font font-bold text-sm mb-2 flex items-center gap-1.5">
+                        <span>🌟</span> REMEMBER!
+                    </h4>
+                    <ul class="text-xs space-y-1.5 list-disc list-inside text-emerald-50">
+                        <li>Wash your hands with soap and clean water</li>
+                        <li>Scrub for at least 20 seconds</li>
+                        <li>Dry with a clean towel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CTA Switch to Quiz -->
+            <div class="pt-2 text-center">
+                <button onclick="switchTab('asesmen')" class="w-full py-3.5 px-6 bg-gradient-to-r from-brand-500 to-fresh-500 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+                    <span>Sudah Paham? Mulai Kuis Formatif!</span>
+                    <span>➔</span>
+                </button>
+            </div>
+
+        </section>
+
+
+        <!-- ================================================== -->
+        <!-- TAB 2: ASESMEN FORMATIF                            -->
+        <!-- ================================================== -->
+        <section id="asesmen-tab" class="tab-content space-y-5">
+
+            <!-- STEP A: Form Input Nama -->
+            <div id="quiz-start-screen" class="glass-card rounded-3xl p-6 text-center space-y-5 border-2 border-brand-200">
+                <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-3xl flex items-center justify-center text-3xl mx-auto shadow-inner">
+                    📝
+                </div>
+                <div>
+                    <h2 class="heading-font text-xl font-bold text-slate-800">Asesmen Formatif Bahasa Inggris</h2>
+                    <p class="text-xs text-slate-500 mt-1">Materi: Personal Hygiene (Kelas 6 SD)</p>
+                </div>
+
+                <div class="bg-blue-50/70 p-4 rounded-2xl border border-blue-100 text-left text-xs space-y-2">
+                    <p class="font-bold text-blue-900">Petunjuk Pengerjaan:</p>
+                    <p class="text-slate-600">• Terdiri dari <strong>10 soal</strong> (5 Soal Benar/Salah & 5 Soal Menjodohkan).</p>
+                    <p class="text-slate-600">• Nilai Maksimal: <strong>100 Poin</strong> (10 Poin per soal).</p>
+                    <p class="text-slate-600">• Hasil nilai dapat langsung dikirimkan ke WhatsApp Guru.</p>
+                </div>
+
+                <div class="text-left space-y-1.5">
+                    <label for="student-name" class="text-xs font-bold text-slate-700 block">Nama Lengkap Siswa <span class="text-red-500">*</span></label>
+                    <input type="text" id="student-name" placeholder="Masukkan nama lengkapmu di sini..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm bg-white" required>
+                    <p id="name-error" class="text-[11px] text-red-500 hidden font-semibold">⚠️ Mohon isi nama lengkap sebelum memulai kuis!</p>
+                </div>
+
+                <button onclick="startQuiz()" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 active:scale-95 text-white font-bold rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2">
+                    <span>🚀 Mulai Kuis Sekarang</span>
+                </button>
+            </div>
+
+            <!-- STEP B: Form Soal (Hidden initially) -->
+            <form id="quiz-form" onsubmit="submitQuiz(event)" class="hidden space-y-5">
+                
+                <!-- Student Banner -->
+                <div class="bg-white rounded-2xl p-3 border border-brand-200 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xl">👤</span>
+                        <div>
+                            <span class="text-[10px] text-slate-400 block font-semibold uppercase">Nama Siswa</span>
+                            <span id="display-student-name" class="text-xs font-bold text-brand-600">-</span>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-brand-100 text-brand-700 font-bold px-2.5 py-1 rounded-full">Kelas 6 SD</span>
+                </div>
+
+                <!-- PART I: BENAR / SALAH -->
+                <div class="glass-card rounded-2xl p-5 border-l-8 border-l-brand-500 space-y-4">
+                    <div class="border-b pb-2">
+                        <span class="bg-brand-100 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Bagian I</span>
+                        <h3 class="heading-font text-base font-bold text-slate-800 mt-1">Soal Benar / Salah (True or False)</h3>
+                        <p class="text-[11px] text-slate-500">Pilihlah B (Benar) atau S (Salah) untuk setiap pertanyaan berikut!</p>
+                    </div>
+
+                    <!-- Soal 1 -->
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+                        <p class="text-xs font-semibold text-slate-800">1. <span class="text-brand-600">Soap</span> berarti sabun.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs custom-radio">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q1" value="Benar" class="hidden" required>
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    A. Benar (True)
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q1" value="Salah" class="hidden">
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    B. Salah (False)
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 2 -->
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+                        <p class="text-xs font-semibold text-slate-800">2. <span class="text-brand-600">Dirty</span> berarti bersih.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs custom-radio">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q2" value="Benar" class="hidden" required>
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    A. Benar (True)
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q2" value="Salah" class="hidden">
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    B. Salah (False)
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 3 -->
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+                        <p class="text-xs font-semibold text-slate-800">3. Kita menggunakan air bersih untuk membasahi tangan.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs custom-radio">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q3" value="Benar" class="hidden" required>
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    A. Benar (True)
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q3" value="Salah" class="hidden">
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    B. Salah (False)
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 4 -->
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+                        <p class="text-xs font-semibold text-slate-800">4. Kita harus menggosok tangan setidaknya selama 20 detik.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs custom-radio">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q4" value="Benar" class="hidden" required>
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    A. Benar (True)
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q4" value="Salah" class="hidden">
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    B. Salah (False)
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Soal 5 -->
+                    <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-2">
+                        <p class="text-xs font-semibold text-slate-800">5. <span class="text-brand-600">Dry your hands</span> berarti membilas tangan dengan air.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs custom-radio">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q5" value="Benar" class="hidden" required>
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    A. Benar (True)
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="q5" value="Salah" class="hidden">
+                                <div class="p-2.5 rounded-xl border border-slate-300 bg-white text-center font-medium transition-all hover:border-brand-300">
+                                    B. Salah (False)
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PART II: MENJODOHKAN -->
+                <div class="glass-card rounded-2xl p-5 border-l-8 border-l-fresh-500 space-y-4">
+                    <div class="border-b pb-2">
+                        <span class="bg-fresh-100 text-fresh-700 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Bagian II</span>
+                        <h3 class="heading-font text-base font-bold text-slate-800 mt-1">Soal Menjodohkan (Matching Words)</h3>
+                        <p class="text-[11px] text-slate-500">Jodohkan Kata Kolom A (English) ke arti dalam Bahasa Indonesia pada Kolom B!</p>
+                    </div>
+
+                    <!-- Ref Box Kolom B -->
+                    <div class="bg-fresh-50/80 p-3 rounded-xl border border-fresh-200 text-xs">
+                        <p class="font-bold text-fresh-800 mb-1">Pilihan Jawaban Kolom B:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 text-[11px] text-slate-700 font-medium">
+                            <span>A. Mengeringkan</span>
+                            <span>B. Handuk</span>
+                            <span>C. Membasahi</span>
+                            <span>D. Menggosok</span>
+                            <span>E. Membilas</span>
+                        </div>
+                    </div>
+
+                    <!-- Soal 6 -->
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                        <span class="font-bold text-slate-800">6. Wet</span>
+                        <select name="q6" class="custom-select w-full sm:w-48 px-3 py-2 rounded-lg border border-slate-300 bg-white text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-fresh-500" required>
+                            <option value="" disabled selected>-- Pilih Pasangan --</option>
+                            <option value="A">A. Mengeringkan</option>
+                            <option value="B">B. Handuk</option>
+                            <option value="C">C. Membasahi</option>
+                            <option value="D">D. Menggosok</option>
+                            <option value="E">E. Membilas</option>
+                        </select>
+                    </div>
+
+                    <!-- Soal 7 -->
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                        <span class="font-bold text-slate-800">7. Scrub</span>
+                        <select name="q7" class="custom-select w-full sm:w-48 px-3 py-2 rounded-lg border border-slate-300 bg-white text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-fresh-500" required>
+                            <option value="" disabled selected>-- Pilih Pasangan --</option>
+                            <option value="A">A. Mengeringkan</option>
+                            <option value="B">B. Handuk</option>
+                            <option value="C">C. Membasahi</option>
+                            <option value="D">D. Menggosok</option>
+                            <option value="E">E. Membilas</option>
+                        </select>
+                    </div>
+
+                    <!-- Soal 8 -->
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                        <span class="font-bold text-slate-800">8. Rinse</span>
+                        <select name="q8" class="custom-select w-full sm:w-48 px-3 py-2 rounded-lg border border-slate-300 bg-white text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-fresh-500" required>
+                            <option value="" disabled selected>-- Pilih Pasangan --</option>
+                            <option value="A">A. Mengeringkan</option>
+                            <option value="B">B. Handuk</option>
+                            <option value="C">C. Membasahi</option>
+                            <option value="D">D. Menggosok</option>
+                            <option value="E">E. Membilas</option>
+                        </select>
+                    </div>
+
+                    <!-- Soal 9 -->
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                        <span class="font-bold text-slate-800">9. Towel</span>
+                        <select name="q9" class="custom-select w-full sm:w-48 px-3 py-2 rounded-lg border border-slate-300 bg-white text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-fresh-500" required>
+                            <option value="" disabled selected>-- Pilih Pasangan --</option>
+                            <option value="A">A. Mengeringkan</option>
+                            <option value="B">B. Handuk</option>
+                            <option value="C">C. Membasahi</option>
+                            <option value="D">D. Menggosok</option>
+                            <option value="E">E. Membilas</option>
+                        </select>
+                    </div>
+
+                    <!-- Soal 10 -->
+                    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+                        <span class="font-bold text-slate-800">10. Dry</span>
+                        <select name="q10" class="custom-select w-full sm:w-48 px-3 py-2 rounded-lg border border-slate-300 bg-white text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-fresh-500" required>
+                            <option value="" disabled selected>-- Pilih Pasangan --</option>
+                            <option value="A">A. Mengeringkan</option>
+                            <option value="B">B. Handuk</option>
+                            <option value="C">C. Membasahi</option>
+                            <option value="D">D. Menggosok</option>
+                            <option value="E">E. Membilas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="pt-2">
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-fresh-500 to-emerald-600 text-white font-bold rounded-2xl shadow-lg hover:shadow-xl active:scale-95 transition-all text-sm flex items-center justify-center gap-2">
+                        <span>📤 Kirim Jawaban Asesmen</span>
+                    </button>
+                </div>
+
+            </form>
+
+            <!-- STEP C: HASIL & REKAPITULASI (Hidden initially) -->
+            <div id="quiz-result-screen" class="hidden glass-card rounded-3xl p-6 text-center space-y-5 border-2 border-fresh-300">
+                
+                <div class="w-20 h-20 bg-fresh-100 text-fresh-600 rounded-full flex items-center justify-center text-4xl mx-auto shadow-inner animate-bounce">
+                    🎉
+                </div>
+
+                <div>
+                    <span class="text-xs font-bold text-fresh-600 uppercase tracking-wider bg-fresh-50 px-3 py-1 rounded-full border border-fresh-200">Kuis Selesai!</span>
+                    <h2 class="heading-font text-2xl font-bold text-slate-800 mt-2">Hasil Asesmen Formatif</h2>
+                    <p class="text-xs text-slate-500">Materi: Personal Hygiene (Bahasa Inggris Kelas 6)</p>
+                </div>
+
+                <!-- Score Box -->
+                <div class="bg-gradient-to-tr from-brand-500 to-fresh-500 p-6 rounded-2xl text-white shadow-lg space-y-1">
+                    <p class="text-xs uppercase font-medium tracking-wide text-white/80">Nilai Akhir Kamu</p>
+                    <p id="final-score" class="heading-font text-5xl font-black">100 / 100</p>
+                    <p id="correct-count-badge" class="text-xs bg-white/20 backdrop-blur-md inline-block px-3 py-1 rounded-full font-semibold mt-2">✅ 10 dari 10 Soal Benar</p>
+                </div>
+
+                <!-- Student Info Card -->
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-left text-xs space-y-1.5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Nama Siswa:</span>
+                        <span id="result-student-name" class="font-bold text-slate-800">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Kelas:</span>
+                        <span class="font-bold text-slate-800">Kelas 6 SD</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Waktu Selesai:</span>
+                        <span id="result-time" class="font-semibold text-slate-700">-</span>
+                    </div>
+                </div>
+
+                <!-- WA Action Button -->
+                <div class="space-y-2 pt-2">
+                    <button onclick="sendWhatsApp()" class="w-full py-3.5 bg-green-500 hover:bg-green-600 active:scale-95 text-white font-bold rounded-xl shadow-md transition-all text-sm flex items-center justify-center gap-2">
+                        <span class="text-lg">💬</span>
+                        <span>Kirim Hasil ke WhatsApp Guru</span>
+                    </button>
+
+                    <button onclick="resetQuiz()" class="w-full py-3 bg-slate-100 hover:bg-slate-200 active:scale-95 text-slate-700 font-semibold rounded-xl transition-all text-xs">
+                        🔄 Ulangi Asesmen
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Navigation Bottom Bar (Mobile First) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-2 shadow-lg">
+        <div class="max-w-xl mx-auto grid grid-cols-2 gap-2">
+            
+            <button id="nav-materi" onclick="switchTab('materi')" class="flex flex-col items-center justify-center py-2 px-3 rounded-2xl transition-all duration-200 bg-brand-500 text-white font-bold shadow-md">
+                <span class="text-base mb-0.5">📘</span>
+                <span class="text-[11px] leading-none">Materi Pembelajaran</span>
+            </button>
+
+            <button id="nav-asesmen" onclick="switchTab('asesmen')" class="flex flex-col items-center justify-center py-2 px-3 rounded-2xl transition-all duration-200 text-slate-500 hover:bg-slate-100 font-medium">
+                <span class="text-base mb-0.5">📝</span>
+                <span class="text-[11px] leading-none">Asesmen Formatif</span>
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- Embedded Application Logic -->
+    <script>
+        /* STORED QUIZ STATE */
+        let studentData = {
+            name: '',
+            score: 0,
+            correctCount: 0,
+            totalQuestions: 10,
+            timestamp: ''
+        };
+
+        // Kunci Jawaban
+        const ANSWER_KEYS = {
+            q1: "Benar", // Soap = Sabun
+            q2: "Salah", // Dirty = Kotor, bukan bersih
+            q3: "Benar", // Air bersih untuk membasahi tangan
+            q4: "Benar", // Scrub 20 seconds
+            q5: "Salah", // Dry = Mengeringkan, bukan membilas
+            q6: "C",     // Wet -> C. Membasahi
+            q7: "D",     // Scrub -> D. Menggosok
+            q8: "E",     // Rinse -> E. Membilas
+            q9: "B",     // Towel -> B. Handuk
+            q10: "A"     // Dry -> A. Mengeringkan
+        };
+
+        function switchTab(tabName) {
+            const materiTab = document.getElementById('materi-tab');
+            const asesmenTab = document.getElementById('asesmen-tab');
+            const navMateri = document.getElementById('nav-materi');
+            const navAsesmen = document.getElementById('nav-asesmen');
+
+            if (tabName === 'materi') {
+                materiTab.classList.add('active');
+                asesmenTab.classList.remove('active');
+
+                navMateri.className = "flex flex-col items-center justify-center py-2 px-3 rounded-2xl transition-all duration-200 bg-brand-500 text-white font-bold shadow-md";
+                navAsesmen.className = "flex flex-col items-center justify-center py-2 px-3 rounded-2xl transition-all duration-200 text-slate-500 hover:bg-slate-100 font-medium";
+            } else {
+                asesmenTab.classList.add('active');
+                materiTab.classList.remove('active');
+
+                navAsesmen.className = "flex flex-col items-center justify-center py-2 px-3 rounded-2xl transition-all duration-200 bg-brand-500 text-white font-bold shadow-md";
+                navMateri.className = "flex flex-col items-center justify-center py-2 px-3 rounded-2xl transition-all duration-200 text-slate-500 hover:bg-slate-100 font-medium";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function playTTS(text) {
+            if ('speechSynthesis' in window) {
+                // Cancel previous speech if playing
+                window.speechSynthesis.cancel();
+
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US';
+                utterance.rate = 0.85; // slightly slower for young learners
+                utterance.pitch = 1.0;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('Fitur suara tidak didukung oleh browser Anda.');
+            }
+        }
+
+        function startQuiz() {
+            const nameInput = document.getElementById('student-name');
+            const nameError = document.getElementById('name-error');
+
+            if (!nameInput.value.trim()) {
+                nameError.classList.remove('hidden');
+                nameInput.focus();
+                return;
+            }
+
+            nameError.classList.add('hidden');
+            studentData.name = nameInput.value.trim();
+
+            document.getElementById('display-student-name').innerText = studentData.name;
+            document.getElementById('quiz-start-screen').classList.add('hidden');
+            document.getElementById('quiz-form').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function submitQuiz(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('quiz-form');
+            const formData = new FormData(form);
+
+            let correct = 0;
+
+            // Check Answers
+            for (let i = 1; i <= 10; i++) {
+                const userAns = formData.get(`q${i}`);
+                if (userAns === ANSWER_KEYS[`q${i}`]) {
+                    correct++;
+                }
+            }
+
+            studentData.correctCount = correct;
+            studentData.score = correct * 10;
+            
+            // Format current date time
+            const now = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            studentData.timestamp = now.toLocaleDateString('id-ID', dateOptions);
+
+            // Update UI
+            document.getElementById('final-score').innerText = `${studentData.score} / 100`;
+            document.getElementById('correct-count-badge').innerText = `✅ ${correct} dari 10 Soal Benar`;
+            document.getElementById('result-student-name').innerText = studentData.name;
+            document.getElementById('result-time').innerText = studentData.timestamp;
+
+            document.getElementById('quiz-form').classList.add('hidden');
+            document.getElementById('quiz-result-screen').classList.remove('hidden');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetQuiz() {
+            document.getElementById('quiz-form').reset();
+            document.getElementById('student-name').value = '';
+            document.getElementById('quiz-result-screen').classList.add('hidden');
+            document.getElementById('quiz-start-screen').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function sendWhatsApp() {
+            const message = `*REKAP ASESMEN FORMATIF BAHASA INGGRIS*
+----------------------------------------
+👤 *Nama Siswa:* ${studentData.name}
+🏫 *Kelas:* Kelas 6 Sekolah Dasar
+📊 *Nilai Akhir:* ${studentData.score} / 100
+✅ *Jawaban Benar:* ${studentData.correctCount} dari 10 Soal
+📅 *Waktu:* ${studentData.timestamp}
+----------------------------------------
+_Materi: Personal Hygiene (English Grade 6)_
+_Dikirim melalui Aplikasi Pembelajaran Interaktif Bahasa Inggris_`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const waUrl = `https://api.whatsapp.com/send?text=${encodedMessage}`;
+
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
